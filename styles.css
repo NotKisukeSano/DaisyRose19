@@ -1,4 +1,4 @@
-
+/* Apply styles to body and ensure it's full-screen */
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@ body {
   background: linear-gradient(45deg, #ff99cc, #ff6699, #ff99cc, #ff6699);
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
-  color: white; 
+  color: white; /* Adjust text color for contrast */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,14 +15,14 @@ body {
 }
 #myButton {
   background-image: url('yippee.png');
-  background-size: cover; 
-  background-position: center; 
-  border: none; 
-  color: white; 
-  font-size: 16px; 
-  width: 300px; 
-  height: 200px; 
-  cursor: pointer; 
+  background-size: cover; /* Ensure the image covers the button */
+  background-position: center; /* Center the image */
+  border: none; /* Remove border */
+  color: white; /* Text color (if any) */
+  font-size: 16px; /* Text size */
+  width: 300px; /* Button width */
+  height: 200px; /* Button height */
+  cursor: pointer; /* Change cursor to pointer on hover */
   padding: 10px;
   border-radius: 15px;
   border: 5px solid #D5006D;
@@ -31,188 +31,189 @@ body {
 }
 
 .gif-container {
-  position: fixed; 
-  bottom: -5px;  
-  left: 1px;    
-  width: auto;  
-  height: auto;  
-  z-index: -11; 
+  position: fixed;  /* Fix the position to the screen */
+  bottom: -5px;  /* 20px from the bottom */
+  left: 1px;    /* 20px from the left */
+  width: auto;   /* Let the width adjust automatically */
+  height: auto;  /* Let the height adjust automatically */
+  z-index: -11; /* Ensure it's on top of other content */
 }
 
 .gif-container img {
-  width: 330px;  
-  height: auto;  
+  width: 330px;  /* Set a width for the GIF */
+  height: auto;  /* Maintain aspect ratio */
 }
 .gif-container2{
-  position: fixed; 
-  bottom: 475px; 
-  left: 1px;    
-  width: auto;   
-  height: auto; 
-  z-index: 9999; 
+  position: fixed;  /* Fix the position to the screen */
+  bottom: 475px;  /* 20px from the bottom */
+  left: 1px;    /* 20px from the left */
+  width: auto;   /* Let the width adjust automatically */
+  height: auto;  /* Let the height adjust automatically */
+  z-index: 9999; /* Ensure it's on top of other content */
+}
 .gif-container2 img{
   width: 450px;
   height: auto;
 }
 .gif-container3 {
-  display: inline-block; 
-  perspective: 1000px; 
+  display: inline-block; /* Ensures the container fits around the GIF */
+  perspective: 1000px; /* Adds depth for 3D effect */
 }
 
 .gif-container3 img{
-  position: fixed;  
-  bottom: 120px; 
-  left: 1500px;   
-  width: 300px;  
-  height: 300px; 
-  z-index: 999; 
+  position: fixed;  /* Fix the position to the screen */
+  bottom: 120px;  /* 20px from the bottom */
+  left: 1500px;    /* 20px from the left */
+  width: 300px;   /* Let the width adjust automatically */
+  height: 300px;  /* Let the height adjust automatically */
+  z-index: 999; /* Ensure it's on top of other content */
   animation: flip 6s infinite;
   transform-origin: center;
 }
 
 @keyframes flip {
   0% {
-    transform: rotateY(0);
+    transform: rotateY(0); /* Start at the original position */
   }
   50% {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg); /* Flip halfway */
   }
   100% {
-    transform: rotateY(360deg); 
+    transform: rotateY(360deg); /* Complete the flip */
   }
 }
 .gif-container4{
-  position: fixed;  
-  bottom: 100px;  
-  left: 200px;   
-  width: auto;   
-  height: auto;  
-  z-index: -10; 
+  position: fixed;  /* Fix the position to the screen */
+  bottom: 100px;  /* 20px from the bottom */
+  left: 200px;    /* 20px from the left */
+  width: auto;   /* Let the width adjust automatically */
+  height: auto;  /* Let the height adjust automatically */
+  z-index: -10; /* Ensure it's on top of other content */
 }
 .gif-container6 img{
-  position: absolute;  
-  bottom: 630px;  
-  left: 1280px;    
-  width: 150px;   
-  height: 150px; 
+  position: absolute;  /* Fix the position to the screen */
+  bottom: 630px;  /* 20px from the bottom */
+  left: 1280px;    /* 20px from the left */
+  width: 150px;   /* Let the width adjust automatically */
+  height: 150px;  /* Let the height adjust automatically */
 
   overflow: hidden;
   z-index: 9999;
 }
 .gif-container5{
-  position: fixed; 
-  bottom: 475px;  
-  left: 1px;    
-  width: 1000px; 
-  height: 200px;  
+  position: fixed;  /* Fix the position to the screen */
+  bottom: 425px;  /* 20px from the bottom */
+  left: 1px;    /* 20px from the left */
+  width: 1000px;   /* Let the width adjust automatically */
+  height: 200px;  /* Let the height adjust automatically */
   overflow: hidden;
-  z-index: 9999; 
+  z-index: 9999; /* Ensure it's on top of other content */
 }
 .gif-container7 img{
-  position: absolute;  
-  bottom: 610px; 
-  left: 450px;    
-  width: 200px;  
-  height: 200px; 
+  position: absolute;  /* Fix the position to the screen */
+  bottom: 610px;  /* 20px from the bottom */
+  left: 450px;    /* 20px from the left */
+  width: 200px;   /* Let the width adjust automatically */
+  height: 200px;  /* Let the height adjust automatically */
 
   overflow: hidden;
   z-index: 9999;
 }
 .kirby{
-  position: fixed;  
-  bottom: 420px;  
-  left: 1100px;    
-  width: 100px;   
-  height: auto; 
-  z-index: 9999; 
+  position: fixed;  /* Fix the position to the screen */
+  bottom: 420px;  /* 20px from the bottom */
+  left: 1100px;    /* 20px from the left */
+  width: 100px;   /* Let the width adjust automatically */
+  height: auto;  /* Let the height adjust automatically */
+  z-index: 9999; /* Ensure it's on top of other content */
   animation: walk 30s linear infinite;
 }
 @keyframes walk {
   0% {
-    transform: translateX(0) scaleX(1); 
+    transform: translateX(0) scaleX(1); /* Start at the left, facing right */
   }
   50% {
-    transform: translateX(700px) scaleX(1);
+    transform: translateX(700px) scaleX(1); /* Walk to the right edge */
   }
   51% {
-    transform: translateX(700px) scaleX(-1); 
+    transform: translateX(700px) scaleX(-1); /* Flip to face left */
   }
   100% {
-    transform: translateX(0) scaleX(-1);
+    transform: translateX(0) scaleX(-1); /* Walk back to the left edge */
   }
 }
 
 .about-button {
-  position: fixed; 
-  bottom: 10px; /
-  left: 10px;
-  padding: 8px 16px;
-  background-color: #C4004B; 
-  color: white; 
-  text-decoration: none; 
-  border-radius: 5px; 
-  font-size: 14px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 1); 
-  border: none; 
+  position: fixed; /* Fixes the button's position relative to the viewport */
+  bottom: 10px; /* Distance from the bottom of the screen */
+  left: 10px; /* Distance from the left of the screen */
+  padding: 8px 16px; /* Smaller button size */
+  background-color: #C4004B; /* Button color (adjust to your preference) */
+  color: white; /* Text color */
+  text-decoration: none; /* Removes underline from the link */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Smaller font size */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1); /* Optional shadow for better visibility */
+  border: none; /* Removes the border */
   display: inline-block;
   text-align: center;
-  width: auto; 
-  min-width: 100px; 
+  width: auto; /* Let the button's width adjust based on content */
+  min-width: 100px; /* Optional: set a minimum width */
 }
 .about-button:hover {
   background-color: #E06688; / Change color when hovered */
 }
 
 .KirbyContainer {
-  position: relative; 
-  width: 100%; 
-  height: auto; 
+  position: relative; /* Makes the container the positioning reference */
+  width: 100%; /* Optional: Ensure full width of the container */
+  height: auto; /* Optional: Adjust height dynamically */
 }
 
 .KirbyContainer img {
   position: absolute;
-  left: 59%; 
-  top: 59%;
+  left: 59%; /* Center horizontally in container */
+  top: 59%; /* Center vertically in container */
   transform: translate(3%,10%);
-  width: 40%; 
-  height: auto; 
-  opacity: 0.65; 
-  border: 2px solid #D5006D; 
-  border-radius: 5%; 
-  object-fit: cover; 
-  background-color: black; 
+  width: 40%; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.65; /* Semi-transparent image */
+  border: 2px solid #D5006D; /* Pink border */
+  border-radius: 5%; /* Circular shape if the image is square */
+  object-fit: cover; /* Makes the image fill the dimensions without distortion */
+  background-color: black; /* Background color for border */
 }
 
 .text-block {
   position: absolute;
-  top: 10%; 
-  left: 59.5%; 
+  top: 10%; /* Align with the image */
+  left: 59.5%; /* Center horizontally in container */
   transform: translate(3%,13%);
-  background-color: rgba(0, 0, 0, 0.3); 
-  color: white; 
-  padding: 10px 20px; 
-  border-radius: 10px; 
-  text-align: center; 
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Spacing around the text */
+  border-radius: 10px; /* Rounded corners for the text block */
+  text-align: center; /* Center-align text inside the block */
   width: 39%;
   height: 400px;
 }
 
 .text-block h3 {
   weight: bold;
-  margin: 0; 
-  font-size: 48px; 
+  margin: 0; /* Remove default margin for heading */
+  font-size: 48px; /* Adjust font size for the heading */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
 }
 
 .text-block p {
-  margin: 5px 0 0 0; 
+  margin: 5px 0 0 0; /* Adjust margin for paragraph text */
   font-size: 32px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);/* Adjust font size for the paragraph */
 }
 
-
+/* Optional: Add hover effect */
 button:hover {
-  opacity: 0.8; 
+  opacity: 0.8; /* Slight opacity change on hover */
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -238,32 +239,32 @@ h1 {
   text-align: center;
   background: linear-gradient(45deg, #ff99cc, #ff6699, #ff99cc, #ff6699);
   box-shadow: 0 0 10px 3px #ff6699;
-  border: 5px solid #ff6699; 
-  background-color: black; 
-  -webkit-text-stroke: 1.5px #D5006D; 
+  border: 5px solid #ff6699; /* Pink border */
+  background-color: black; /* Solid background color for the box (non-transparent) */
+  -webkit-text-stroke: 1.5px #D5006D; /* Dark text outline */
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #D5006D;
   animation: animate-gradient 2.5s linear infinite;
 
-  padding: 20px; 
+  padding: 20px; /* Adds padding inside the box */
 }
 
 .pink-box {
-  background-color: #ff99cc;  
-  border: 5px solid #ff6699; 
-  padding: 20px 50px;  
-  font-size: 50px;  
-  font-family: 'Pacifico', sans-serif;  
-  color: #ffffff;  
-  text-align: center;  
-  text-transform: uppercase;  
-  box-shadow: 0 0 15px 5px #ff6699;  
-  position: absolute;  
-  top: 0;  
-  left: 50%;  
-  transform: translateX(-50%);  
+  background-color: #ff99cc;  /* Solid pink background */
+  border: 5px solid #ff6699;  /* Pink border around the box */
+  padding: 20px 50px;  /* Space inside the box (top/bottom, left/right) */
+  font-size: 50px;  /* Large font size for text */
+  font-family: 'Pacifico', sans-serif;  /* Simple font */
+  color: #ffffff;  /* White text color */
+  text-align: center;  /* Center the text inside */
+  text-transform: uppercase;  /* Make text uppercase */
+  box-shadow: 0 0 15px 5px #ff6699;  /* Optional: Glow effect around the box */
+  position: absolute;  /* Positioning the box absolutely */
+  top: 0;  /* Place it at the very top of the page */
+  left: 50%;  /* Position the box in the center horizontally */
+  transform: translateX(-50%);  /* Adjust the position by moving it back left by 50% of its width */
 }
 
 
@@ -278,7 +279,7 @@ p {
   font-size: 1.5em;
 }
 
-
+/* Keyframes for the gradient animation */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -293,35 +294,35 @@ p {
 
 .rose {
   position: absolute;
-  width: 75px; 
+  width: 75px; /* Default size for roses */
   height: 100px;
-  background-image: url('rose.png'); 
+  background-image: url('rose.png'); /* Replace with your image file */
   background-size: cover;
   opacity: 0.8;
   top: -150px;
   z-index: 99999;
 
-  
+  /* Apply both falling and rotating animations */
   animation:
-    fall 10s linear infinite,  
-    rotate 10s linear infinite;
+    fall 10s linear infinite,  /* Falling animation (10s duration) */
+    rotate 10s linear infinite; /* Continuous rotating animation */
 }
 
-
+/* Keyframes for falling animation */
 @keyframes fall {
   from {
-    top: -150px; 
+    top: -150px; /* Start above the screen */
   }
   to {
-    top: 100vh; 
+    top: 100vh; /* End below the screen */
   }
 }
 
-
+/* Keyframes for rotating animation */
 @keyframes rotate {
   from {
-    transform: rotate(0deg); 
+    transform: rotate(0deg); /* Start with no rotation */
   }
   to {
-    transform: rotate(360deg); 
+    transform: rotate(360deg); /* Full rotation */
 }
