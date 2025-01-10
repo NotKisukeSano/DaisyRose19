@@ -121,7 +121,7 @@ body {
 }
 .kirby{
   position: fixed;  /* Fix the position to the screen */
-  bottom: 420px;  /* 20px from the bottom */
+  bottom: 400px;  /* 20px from the bottom */
   left: 1100px;    /* 20px from the left */
   width: 100px;   /* Let the width adjust automatically */
   height: auto;  /* Let the height adjust automatically */
