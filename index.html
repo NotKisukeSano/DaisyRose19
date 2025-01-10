@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE QUEEN IS 19!!!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.google.com/specimen/Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .player-container {
+        position: absolute;
+        left: 480px;
+        top: 640px;
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 320px;
+        background-color: rgba(241, 167, 193, 0.8);
+        border-radius: 30px;
+        padding: 5px;
+        margin: 0px;
+        color: white;
+        text-align: center;
+        border: 4px solid #d6336c;
+        font-family:'Dancing Script', cursive;
+        font-size: 20px;/* Dark pink border around the entire player */
+      }
+
+      .player-container h4{
+        position:absolute;
+        left: 55px;
+        right: 50px;
+        top: 183px;
+        margin-top: 5;
+        margin-bottom: 5;
+        font-family:'Dancing Script', cursive;
+      }
+      .player-container button, .player-container input[type="range"] {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-family:'Dancing Script', cursive;
+        font-weight: bold;
+      }
+
+      .player-container button {
+        padding: 10px;
+        background-color: #d6336c;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+      }
+
+      .player-container button:hover {
+        background-color: #e83e8c;
+      }
+
+      .player-container input[type="range"] {
+        width: 100%;
+      }
+
+      .now-playing {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-family:'Dancing Script', cursive;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="player-container">
+      <h3>MUSIC</h3>
+      <div id="nowPlaying" class="now-playing">Now Playing: Funky Town</div>
+      <audio id="audioPlayer" controls>
+        <source id="audioSource" src="funkytown.mp3" type="audio/mp3">
+      </audio>
+
+      <button id="playPauseBtn">Play</button>
+
+      <h4>Volume</h4>
+      <input type="range" id="volumeControl" value="100" min="0" max="100">
+
+      <div>
+        <button id="nextSongBtn">Next Song</button>
+      </div>
+    </div>
+
+    <script>
+      const songs = [
+        { title: "Ma Meilleure Ennemie ❤️", file: "mameilleureennemie.mp3" },
+        { title: "Funky Town", file: "funkytown.mp3" },
+        { title: "Boogie Wonderland", file: "boogiewonderland.mp3" },
+        { title: "Buddy Holly", file: "buddyholly.mp3" },
+        { title: "Poker Face", file: "pokerface.mp3" },
+      ];
+
+      let currentSongIndex = 0;
+      const audioPlayer = document.getElementById("audioPlayer");
+      const playPauseBtn = document.getElementById("playPauseBtn");
+      const nextSongBtn = document.getElementById("nextSongBtn");
+      const volumeControl = document.getElementById("volumeControl");
+      const nowPlaying = document.getElementById("nowPlaying");
+
+      // Load and play the current song
+      function loadSong(index) {
+        audioPlayer.src = songs[index].file;
+        audioPlayer.load();
+        audioPlayer.play();
+        playPauseBtn.textContent = "Pause";
+        nowPlaying.textContent = `Now Playing: ${songs[index].title}`;
+      }
+
+      // Toggle Play/Pause
+      playPauseBtn.addEventListener("click", function() {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          playPauseBtn.textContent = "Pause";
+        } else {
+          audioPlayer.pause();
+          playPauseBtn.textContent = "Play";
+        }
+      });
+
+      // Next song
+      nextSongBtn.addEventListener("click", function() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        loadSong(currentSongIndex);
+      });
+
+      // Handle volume control
+      volumeControl.addEventListener("input", function() {
+        audioPlayer.volume = volumeControl.value / 100;
+      });
+
+      // Handle song end and move to next
+      audioPlayer.addEventListener("ended", function() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        loadSong(currentSongIndex);
+      });
+
+      // Initially load the first song
+      loadSong(currentSongIndex);
+    </script>
+
+
+
+
+  <style>
+    h1 {
+      font-size: 100px;
+      text-align: center;
+      color: #FF69B4;
+      font-family:'Dancing Script', cursive;
+      text-transform: uppercase;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+
+
+    body {
+      margin: 0;
+      height: 100vh;
+      position: relative;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .roses-background {
+
+      background: url('roses-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+    }
+
+
+  </style>
+</head>
+<div class="gif-container">
+  <img src="melody.gif" alt="My Melody">
+</div>
+
+<div class="gif-container2">
+  <img src="cake.gif" alt="Birthday Cake">
+</div>
+
+<div class="gif-container3">
+  <img src="kirby-dancing.gif" alt="Kirby Dancing">
+</div>
+
+<div class="gif-container4">
+  <img src="MelodyDance.gif" alt="Dancing Melody">
+</div>
+
+<div class="gif-container5">
+  <img src="kirbywalk.gif" alt="Walking Kirby" class="kirby">
+</div>
+
+<div class="gif-container6">
+  <img src="quirrel.gif" alt="quirrel">
+</div>
+
+<div class="gif-container7">
+  <img src="cat.gif" alt="yippeecat">
+</div>
+
+<body>
+
+  <h1>HAPPY BIRTHDAY 🥳DAISY!!!🥳</h1>
+  <div class="roses-background"></div>
+
+  <button id="myButton" onclick="playSound()"></button>
+
+  <audio id="mySound">
+    <source src="YippeeSound.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    function playSound() {
+      var audio = new Audio('YippeeSound.mp3');
+      audio.volume = 0.2;
+      audio.play();
+    }
+  </script>
+
+<div style="position: absolute;">
+      <img src="arrow.png" width="385" height="200" style="position: absolute; left: -500px; top: -10px;">
+</div>
+<div style="position: absolute;">
+      <img src="jack.jpg" width="380" height="150" style="position: absolute; left: 400px; top: -110px;">
+</div>
+
+<div style="
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-220%, 150%);
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        font-family:'Dancing Script', cursive;">
+        CLICK HERE!!!
+    </div>
+
+<div style="
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-250%, 150%);
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family:'Dancing Script', cursive;">
+            LOOK AT THIS DIVA GO👀!!!
+</div>
+
+<div style="
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -100%);
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Lobster', cursive;">
+            YIPPEE!!!
+</div>
+
+<div class="KirbyContainer">
+  <img src="KirbyBackground.jpg" alt="KirbyBox" class="kirby-image">
+  <div class="text-block" style=" font-family:'Dancing Script', cursive; font-weight:bold;">
+    <h3>❤️THE QUEEN IS 19!!!❤️</h3>
+    <p>A MASSIVE HAPPY BIRTHDAY TO YOU DAISY!!! YOU ARE A BEAUTIFUL, INCREDIBLE QUEEN WHO DESERVES NOTHING LESS THAN THE FINEST CELEBRATIONS, ENDLESS LOVE, AND ALL THE JOY IN THE WORLD TODAY AND ALWAYS!!!! HOPE YOU HAVE A GREAT DAY😊</p>
+  </div>
+</div>
+<a href="Daisy19New.html" style=" font-family:'Lobster', cursive;" class="about-button">About The Creator 😎</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
